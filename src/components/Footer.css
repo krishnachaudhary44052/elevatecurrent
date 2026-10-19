@@ -1,0 +1,93 @@
+.footer {
+  background: #f8fcfa;
+  border-top: 1px solid #e2e9e7;
+  color: #132d58;
+  font-family: inherit;
+  padding: 0 clamp(18px, 4.2vw, 64px);
+}
+.footer-main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 34px 0 30px;
+  display: grid;
+  grid-template-columns: minmax(260px, 1.75fr) repeat(3, minmax(130px, .8fr));
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+.footer-company { min-width: 0; }
+.footer-company .brand { display: inline-flex; margin-bottom: 17px; }
+.footer-company .brand-name { font-size: 25px; }
+.footer-about-copy {
+  max-width: 390px;
+  margin: 0 0 16px;
+  color: #586b86;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.footer-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  color: #17345e;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.footer-email:hover, .footer-column a:hover, .footer-bottom a:hover { color: #075cff; }
+.footer-tagline { display: block; color: #8190a8; font-size: 11px; margin-bottom: 18px; }
+.footer-social { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; }
+.footer-social span { flex-basis: 100%; margin-bottom: 2px; color: #243c5f; font-size: 12px; font-weight: 700; }
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eaf4f0;
+  color: #0b5cff;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.footer-social a:hover { background: #dcecff; transform: translateY(-1px); }
+.footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; padding-top: 7px; }
+.footer-column h3 { margin: 0 0 5px; color: #152b4c; font-size: 13px; font-weight: 750; }
+.footer-column a { color: #586b86; font-size: 13px; line-height: 1.35; text-decoration: none; transition: color .2s; }
+.footer-bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 54px;
+  padding: 14px 0;
+  border-top: 1px solid #e2e9e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: #7b8799;
+  font-size: 11px;
+}
+.footer-bottom-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 17px; }
+.footer-bottom a { color: #64748b; text-decoration: none; }
+.footer-bottom small { font-size: 11px; white-space: nowrap; }
+@media (max-width: 900px) {
+  .footer-main { grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(110px, 1fr)); gap: 22px; }
+  .footer-about-copy { font-size: 13px; }
+  .footer-column a { font-size: 12px; }
+}
+@media (max-width: 680px) {
+  .footer { padding: 0 20px; }
+  .footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 22px; padding: 27px 0; }
+  .footer-company { grid-column: 1 / -1; }
+  .footer-company .brand-name { font-size: 23px; }
+  .footer-about-copy { max-width: 520px; }
+  .footer-column { gap: 10px; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; padding: 14px 0 18px; }
+  .footer-bottom-links { justify-content: flex-start; gap: 8px 14px; }
+  .footer-bottom small { white-space: normal; }
+}
+@media (max-width: 380px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .footer-column h3 { font-size: 12px; }
+  .footer-column a { font-size: 12px; overflow-wrap: anywhere; }
+}
